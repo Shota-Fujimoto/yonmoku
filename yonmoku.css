@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+/* 全体を中央揃え */
+body {
+    text-align: center;
+}
+
+
+/* 設定表 */
+#rule_table {
+    margin:0 auto;
+    margin-top: 50px;
+}
+#rule_table th {
+    width: 50;
+    height: 50;
+}
+#rule_table td {
+    width: 110;
+    height: 50;
+}
+
+
+/* スタートボタン */
+#start_btn {
+    width: 100;
+    height: 50;
+    margin-top: 30;
+}
+
+
+/* 4目表 */
+#yonmoku_table{
+	margin: 50 auto;
+	border-spacing: 0;
+	border-collapse: collapse;
+	border: solid 1px rgba( 0,0,0,.6 );
+	overflow: hidden;
+}
+#yonmoku_table td{
+    width: 50;
+    height: 50;
+	border: dotted 1px rgba( 0,0,0,.6 );
+	text-align:center;
+	position: relative;
+}
+#yonmoku_table td:hover::before,
+#yonmoku_table td:hover::after{
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: rgb(150, 250, 130);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+#yonmoku_table td:hover::after{
+	height: 200vh;
+	top: -100vh;
+}

@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="yonmoku.css" type="text/css">
+    <script src="yonmoku.js" charset="utf-8"></script>
+    <title>4目並べ</title>
+</head>
+<body>
+    <table id="rule_table">
+        <tr>
+            <th>相手</th>
+            <th></th>
+            <td>
+                <input type="radio" name="opp" value="0" id="opp_0" onchange="changeOpp()" checked/>
+                <label for="opp_0">CPU</label>
+            </td>
+            <td>
+                <input type="radio" name="opp" value="9" id="opp_9" onchange="changeOpp()"/>
+                <label for="opp_9">自分で操作</label>
+            </td>
+        </tr>
+        <tr>
+            <th>順番</th>
+            <th></th>
+            <td>
+                <input type="radio" name="turn" value="0" id="turn_0" checked/>
+                <label for="turn_0">先行</label>
+            </td>
+            <td>
+                <input type="radio" name="turn" value="9" id="turn_9"/>
+                <label for="turn_9">後攻</label>
+            </td>
+        </tr>
+    </table>
+
+    <input type="button" id="start_btn" value="START" onclick="opeGame()"/>
+    <input type="hidden" id="started" value="0">
+    <input type="hidden" id="turn_cnt" value="1">
+
+    <table id="yonmoku_table">
+        <tr>
+            <td id="td11" onclick="onclickTd(this)"></td>
+            <td id="td12" onclick="onclickTd(this)"></td>
+            <td id="td13" onclick="onclickTd(this)"></td>
+            <td id="td14" onclick="onclickTd(this)"></td>
+            <td id="td15" onclick="onclickTd(this)"></td>
+            <td id="td16" onclick="onclickTd(this)"></td>
+            <td id="td17" onclick="onclickTd(this)"></td>
+        </tr>
+        <tr>
+            <td id="td21" onclick="onclickTd(this)"></td>
+            <td id="td22" onclick="onclickTd(this)"></td>
+            <td id="td23" onclick="onclickTd(this)"></td>
+            <td id="td24" onclick="onclickTd(this)"></td>
+            <td id="td25" onclick="onclickTd(this)"></td>
+            <td id="td26" onclick="onclickTd(this)"></td>
+            <td id="td27" onclick="onclickTd(this)"></td>
+        </tr>
+        <tr>
+            <td id="td31" onclick="onclickTd(this)"></td>
+            <td id="td32" onclick="onclickTd(this)"></td>
+            <td id="td33" onclick="onclickTd(this)"></td>
+            <td id="td34" onclick="onclickTd(this)"></td>
+            <td id="td35" onclick="onclickTd(this)"></td>
+            <td id="td36" onclick="onclickTd(this)"></td>
+            <td id="td37" onclick="onclickTd(this)"></td>
+        </tr>
+        <tr>
+            <td id="td41" onclick="onclickTd(this)"></td>
+            <td id="td42" onclick="onclickTd(this)"></td>
+            <td id="td43" onclick="onclickTd(this)"></td>
+            <td id="td44" onclick="onclickTd(this)"></td>
+            <td id="td45" onclick="onclickTd(this)"></td>
+            <td id="td46" onclick="onclickTd(this)"></td>
+            <td id="td47" onclick="onclickTd(this)"></td>
+        </tr>
+        <tr>
+            <td id="td51" onclick="onclickTd(this)"></td>
+            <td id="td52" onclick="onclickTd(this)"></td>
+            <td id="td53" onclick="onclickTd(this)"></td>
+            <td id="td54" onclick="onclickTd(this)"></td>
+            <td id="td55" onclick="onclickTd(this)"></td>
+            <td id="td56" onclick="onclickTd(this)"></td>
+            <td id="td57" onclick="onclickTd(this)"></td>
+        </tr>
+        <tr>
+            <td id="td61" onclick="onclickTd(this)"></td>
+            <td id="td62" onclick="onclickTd(this)"></td>
+            <td id="td63" onclick="onclickTd(this)"></td>
+            <td id="td64" onclick="onclickTd(this)"></td>
+            <td id="td65" onclick="onclickTd(this)"></td>
+            <td id="td66" onclick="onclickTd(this)"></td>
+            <td id="td67" onclick="onclickTd(this)"></td>
+        </tr>
+    </table>
+</body>
+</html>
